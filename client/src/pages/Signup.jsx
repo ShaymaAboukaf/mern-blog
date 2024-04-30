@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Button, Label, Spinner, TextInput } from "flowbite-react";
 import { useSignup } from "../features/useSignup";
+import OAuth from "../components/OAuth";
 
 function Signup() {
   const { signup, isPending } = useSignup();
@@ -24,7 +25,7 @@ function Signup() {
         <div className="flex-1">
           <span className="text-4xl font-bold dark:text-white">
             <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
-              Shayma's
+              Shayma&apos;s
             </span>
             Blog
           </span>
@@ -108,6 +109,7 @@ function Signup() {
             >
               {isPending ? <Spinner /> : "Sign Up"}
             </Button>
+            <OAuth />
           </form>
           <div className="text-sm mt-5">
             <span>Have an account?</span>{" "}
